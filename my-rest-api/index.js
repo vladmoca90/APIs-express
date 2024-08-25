@@ -19,3 +19,20 @@ app.post("/msg", (req, res, next) => {
     const message = req.body.message;
     res.json({ "receivedMessage": message });
 });
+
+// With classes
+
+class Message {
+    constructor(content) {
+        this.content = content;
+    }
+
+    getContent() {
+        return this.content;
+    }
+}
+
+app.post("/msg", (req, res, next) => { // Refractor the POST to use the class
+    const newMessage = new Message(req.body.message);
+    res.json({ "receivedMessage": newMessage.getContent() });
+});
