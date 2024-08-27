@@ -1,10 +1,10 @@
 // Import Express
 const express = require("express");
-const server = require("express");
+//const server = require("express");
 
 // Create an instance of Express
 const app = express();
-const createServer = server.createServer();
+//const createServer = server.createServer();
 
 // Middleware to parse JSON bodies
 app.use(express.json());
