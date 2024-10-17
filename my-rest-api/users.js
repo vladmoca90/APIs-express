@@ -1,4 +1,4 @@
-{
+const data = {
     "user1": {
         "id": 1,
         "firstname": "Munonye",
@@ -24,3 +24,5 @@
         "email": "oleander@gmail.com"
     }
 }
+
+export.module data;

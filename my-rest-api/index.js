@@ -10,11 +10,7 @@ const app = express();
 app.use(express.json());
 
 // Sample data
-let items = [
-    { id: 1, name: "Item One" },
-    { id: 2, name: "Item Two" },
-    { id: 3, name: "Item Three" },
-];
+let items = require("./users");
 
 // GET endpoint to return all items
 app.get("/api/items", (req, res) => {
