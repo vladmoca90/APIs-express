@@ -24,3 +24,5 @@ const data = {
         "email": "oleander@gmail.com"
     }
 }
+
+module.exports = data;

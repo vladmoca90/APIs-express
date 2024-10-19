@@ -6,10 +6,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Sample data (In a real app, you'd use a database)
-let items = [
-    { id: 1, name: 'Item One' },
-    { id: 2, name: 'Item Two' }
-];
+let items = require("./users");
 
 // GET route to fetch all items
 app.get('/api/items', (req, res) => {
