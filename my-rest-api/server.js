@@ -1,13 +1,13 @@
 //REST API demo in Node.js
-const express = require('express'); // requre the express framework
+const express = require("express"); // requre the express framework
 const app = express();
-const fs = require('fs'); //require file system object
+const fs = require("fs"); //require file system object
 
 const users = "/getUsers";
 
 // Endpoint to Get a list of users
 app.get(users, function (req, res) {
-    fs.readFile(__dirname + "/" + "users.json", 'utf8', function (err, data) {
+    fs.readFile(__dirname + "/" + "users.json", "utf8", function (err, data) {
         console.log(data);
         res.end(data); // you can also use res.send()
     });
