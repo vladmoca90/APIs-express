@@ -1,28 +1,28 @@
 const data = {
-    user1: {
+    "user1": {
         "id": 1,
         "firstname": "Munonye",
         "lastname": "Kindson",
         "email": "kany@gmail.com"
     },
-    user2: {
+    "user2": {
         "id": 2,
         "firstname": "Imolode",
         "lastname": "Saffron",
         "email": "saffron@gmail.com"
     },
-    user3: {
+    "user3": {
         "id": 3,
         "firstname": "Munonye",
         "lastname": "Othniel",
         "email": "othniel@gmail.com"
     },
-    user4: {
+    "user4": {
         "id": 4,
         "firstname": "Yuba",
         "lastname": "Oleander",
         "email": "oleander@gmail.com"
     }
-}
+};
 
-module.exports = data;
+export default data;
