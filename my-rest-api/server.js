@@ -1,8 +1,8 @@
 // REST API demo in Node.js
-const express = require("express"); // require the express framework
+const express = require("express"); // Import the Express framework
 const app = express();
-const fs = require("fs"); // require file system module
-const path = require("path"); // require path module for handling file paths
+const fs = require("fs"); // Import the file system module
+const path = require("path"); // Import the path module for handling file paths
 
 const usersEndpoint = "/getUsers";
 
@@ -18,12 +18,13 @@ app.get(usersEndpoint, function (req, res) {
         }
         
         console.log("Data fetched from users.json:", data);
-        res.send(data); // send data as response
+        res.header("Content-Type", "application/json"); // Set response type to JSON
+        res.send(data); // Send data as response
     });
 });
 
-// Create a server to listen at port 8080
-const server = app.listen(8080, function () {
-    const port = server.address().port;
+// Create a server to listen on port 8080
+const port = 8080;
+app.listen(port, function () {
     console.log(`REST API demo app listening at http://localhost:${port}${usersEndpoint}`);
 });
