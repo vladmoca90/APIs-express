@@ -9,14 +9,14 @@ const usersEndpoint = "/getUsers";
 // Endpoint to get a list of users
 app.get(usersEndpoint, function (req, res) {
     const filePath = path.join(__dirname, "users.json");
-    
+
     fs.readFile(filePath, "utf8", function (err, data) {
         if (err) {
             console.error("Error reading users.json:", err);
             res.status(500).send("Error reading users data.");
             return;
         }
-        
+
         console.log("Data fetched from users.json:", data);
         res.header("Content-Type", "application/json"); // Set response type to JSON
         res.send(data); // Send data as response
